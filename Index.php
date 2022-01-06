@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-
+    <h1>Homepage</h1>
+    <a href="login.php">Login</a>
+    <a href="register.php">Register</a>
 </body>
 </html>
