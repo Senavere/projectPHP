@@ -1,8 +1,16 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:ital,wght@0,600;1,500&family=Pacifico&family=Source+Sans+Pro:ital,wght@1,300;1,600&family=Spline+Sans&family=The+Nautigal:wght@700&display=swap');
+
 body {
     text-align: center;
-    margin: 50% auto auto auto;
     max-width: 100vh;
+}
+
+/* Login.php */
+
+.login-body {
+    background-color: rgb(255, 252, 244);
+    margin: 50% auto auto auto;
 }
 
 .login-header {
@@ -26,11 +34,17 @@ body {
 .login-btn {
     font-family: 'Pacifico';
     padding: 1% 6%;
+    border-color: rgb(182, 182, 182);
+    border-radius: 1em;
 }
 
 
 /* Register.php */
 
+.register-body{
+    background-color: rgb(255, 252, 244);
+    margin: 50% auto auto auto;
+}
 
 .register-header {
     font-family: 'Pacifico';
@@ -47,4 +61,66 @@ body {
 .register-btn {
     font-family: 'Pacifico';
     padding: 1% 6%;
+    border-color: rgb(182, 182, 182);
+    border-radius: 1em;
+}
+
+@media screen and (min-width: 600px) {
+
+/* Login.php */
+
+/* Register.php */
+
+.register-body {
+    margin-top: 32%;
+}
+
+}
+
+@media screen and (min-width: 768px) {
+
+/* Login.php */
+
+.login-body {
+    margin-top: 32%;
+}
+
+/* Register.php */
+
+.register-body {
+    margin-top: 25%;
+}
+
+}
+
+@media screen and (min-width: 1023px) {
+
+/* Login.php */
+
+.login-body {
+     margin-top: 18%;
+}
+
+/* Register.php */
+
+.register-body {
+    margin-top: 10%;
+}
+
+}
+
+@media screen and (min-width: 1280px) {
+
+/* Login.php */
+
+/* Register.php */
+
+}
+
+@media screen and (min-width: 1500px) {
+
+/* Login.php */
+
+/* Register.php */
+
 }

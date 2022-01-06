@@ -9,35 +9,49 @@
     <link href="css/login-register.css" rel="stylesheet">
 
 </head>
-<body>
+<body class="register-body">
 
-    <h1 class="register-header">Register</h1>
+    <main class="register-main">
+        <h1 class="register-header">Register</h1>
+        <form class="register-form">
+            <div class="register-input">
+                <div>
+                    <label>Name</label>
+                </div>
+                <input type="text" placeholder="Enter your firstname" require>
+                <input type="text" placeholder="Enter your surname" require>
+            </div>
+            <div class="register-input">
+                <div>
+                    <label>Email Address</label>
+                </div>
+                <input type="text" placeholder="Enter your email" require>
+            </div>
+            <div class="register-input">
+                <div>
+                    <label>Username</label>
+                </div>
+                <input type="text" placeholder="Enter a Username" require>
+            </div>
+            <div class="register-input">
+                <div>
+                    <label>Password</label>
+                </div>
+                <input type="text" placeholder="Enter a Password" require>
+            </div>
+            <div class="register-input">
+                <div>
+                    <label>Confirm Password</label>
+                </div>
+                <input type="text" placeholder="Confirm Password" require>
+            </div>
+        </form>
 
-    <form class="register-form">
-        <div class="register-input">
-            <input type="text" placeholder="Firstname" require>
+        <div class="register-btns">
+            <button type="submit" class="register-btn">Submit</button>
+            <a href="login.php"> <button type="submit" class="register-btn">Back</button> </a>
         </div>
-        <div class="register-input">
-            <input type="text" placeholder="Surname" require>
-        </div>
-        <div class="register-input">
-            <input type="text" placeholder="Email Address" require>
-        </div>
-        <div class="register-input">
-            <input type="text" placeholder="Username" require>
-        </div>
-        <div class="register-input">
-            <input type="text" placeholder="Password" require>
-        </div>
-        <div class="register-input">
-            <input type="text" placeholder="Confirm Password" require>
-        </div>
-    </form>
-
-    <div class="register-btns">
-        <button type="submit" class="register-btn">Submit</button>
-        <a href="login.php"> <button type="submit" class="register-btn">Back</button> </a>
-    </div>
+    </main>
 
 </body>
 </html>
