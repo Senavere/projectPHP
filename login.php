@@ -1,3 +1,7 @@
+<?php
+require_once 'php/php_login.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,22 +21,24 @@
 
         <h3 class="login-second-header">Login</h3>
 
-        <form class="login-form">
+        <form class="login-form" method="post" action="login.php">
 
             <div class="login-input">
                 <label>Username</label>
-                <input type="text" placeholder="Enter username here..." require>
+                <input type="text" name="username" placeholder="Enter username here..." require>
             </div>
 
             <div class="login-input">
                 <label>Password</label>
-                <input type="text" placeholder="Enter password here..." require>
+                <input type="password" name="password" placeholder="Enter password here..." require>
             </div>
 
             <div class="login-btns">
-                <button type="submit" class="login-btn">Continue</button>
+                <button type="submit" name="submit" class="login-btn">Continue</button>
                 <a href="register.php"><button type="confirm" class="login-btn">Register</button></a>
             </div>
+
+            <?= "<h3>$error</h3>" ?>
 
         </form>
 

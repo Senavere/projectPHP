@@ -1,4 +1,14 @@
 <?php
+
+require_once 'data_connection.php';
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+$error = '';
+$success = '';
+
 if(isset($_POST['submit'])){
         $regEmail = $_POST['email'];
         $regUsername = $_POST['username'];
@@ -25,17 +35,17 @@ if(isset($_POST['submit'])){
             $error = 'Passwords doesnt match';
         }
 
-        if(!isset($error)){
-            $sql = "SELECT username FROM users WHERE username = '$regUsername'";
+        if(empty($error)){
+            $sql = "SELECT * FROM users WHERE username = '$regUsername'";
             $sql_result = $pdo -> query($sql);
             $result = count($sql_result->fetchAll());
             if($result > 0) {
-                echo 'user already exist';
+                $error = 'user already exist';
             } else {
                 $newPassword = password_hash($regPassword, PASSWORD_DEFAULT);
-                $sql_insert = "INSERT INTO users(username, email, password) VALUES ($regUsername, $regEmail, $regPassword)";
+                $sql_insert = "INSERT INTO users(username, email, password) VALUES ('$regUsername', '$regEmail', '$newPassword')";
                 $pdo -> query($sql_insert);
-                echo 'user has been added';
+                $success ='user has been added';
             }
         }
 

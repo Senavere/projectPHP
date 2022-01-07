@@ -1,5 +1,4 @@
 <?php
-    require_once 'php/data_connection.php';
     require_once 'php/php_register.php';
 ?>
 
@@ -20,7 +19,7 @@
 
         <h1 class="register-header">Register</h1>
 
-        <form class="register-form" method="post" action="" >
+        <form class="register-form" method="post" action="register.php" >
 
             <div class="register-input">
                 <div>
@@ -56,6 +55,7 @@
             </div>
 
             <?= "<h3>$error</h3>" ?>
+            <?= "<h3>$success</h3>" ?>
 
         </form>
 
