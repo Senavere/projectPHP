@@ -1,8 +1,3 @@
-<?php
-session_start();
-    $username = $_SESSION['username'];
-    $userid = $_SESSION['user_id'];
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +10,8 @@ session_start();
 
 </head>
 <body>
-    <h1>Homepage</h1>
-    <?php echo $username; ?>
-    <a href="login.php">Login</a>
-    <a href="logout.php">Logout</a>
-    <a href="register.php">Register</a>
+
+    <?php include 'navbar.php'; ?>
+
 </body>
 </html>

@@ -1,0 +1,23 @@
+nav {
+	background-color: lightblue;
+}
+nav img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+ul{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+}
+ul li{
+    padding: 20px;
+    margin-top: 20px;
+}
