@@ -17,6 +17,7 @@ session_start();
 <header>
     <nav>
         <img src="img/logo.jpg" alt="logo">
+        <?php echo $username; ?>
 
         <ul>
             <li><a href=".html">Hem</a></li>

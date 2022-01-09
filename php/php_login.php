@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
             session_start();
             $_SESSION['username'] = $user['username'];
             $_SESSION['user_id'] = $user['user_id'];
-            header("location: ../index.php");
+            header("location:index.php");
         }else {
             $error = 'password doesnt match';
         }
