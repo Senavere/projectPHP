@@ -17,7 +17,7 @@ require_once 'php/php_login.php';
 
     <main class="login-main">
 
-        <h1 class="login-header">Instagram</h1>
+    <img src="logo.png" alt="logo">
 
         <h3 class="login-second-header">Login</h3>
 
