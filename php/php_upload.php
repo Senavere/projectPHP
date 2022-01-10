@@ -13,6 +13,7 @@ $postFile = $picFolder . $picFileName;
 
 if(isset($_POST ['submit'])) {
     if(move_uploaded_file($tmpFile, $postFile)) {
+        $pdo = connectToDB();
         $sql = $pdo -> prepare ("INSERT INTO posts(user_id, content, title, picture) VALUES ( :user_id , :content, :title, :picture)");
         $sql -> bindParam(":user_id", $userid);
         $sql -> bindParam(":content", $content);

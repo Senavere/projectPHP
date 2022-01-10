@@ -24,7 +24,7 @@ session_start();
 
             <?php echo $username; ?>
             <li><a href=".html">Hem</a></li>
-            <li><a href=".html">...</a></li>
+            <li><a href="profile.php?id=<?php echo $userid; ?>">Profile</a></li>
             <li><a href="upload.php">Upload picture</a></li>
             <li><a href="logout.php">Logout</a></li>
 

@@ -36,6 +36,7 @@ if(isset($_POST['submit'])){
         }
 
         if(empty($error)){
+            $pdo = connectToDB();
             $sql = "SELECT * FROM users WHERE username = '$regUsername'";
             $sql_result = $pdo -> query($sql);
             $result = count($sql_result->fetchAll());
