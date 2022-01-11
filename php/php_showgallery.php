@@ -16,9 +16,9 @@ if (session_status() === PHP_SESSION_NONE) {
         $sql -> execute();
         $posts = $sql -> fetchAll(PDO::FETCH_CLASS);
         foreach($posts as $post){
-            echo "<h2>".$post -> title."</h2>";
-            echo "<p>".$post -> content."</p>";
-            echo "<img class='profile-img' src='../".$post -> picture."' width='300' height='300'>";
+            echo "<div class='gallery-item'><h2>".$post -> title."</h2><br>";
+            echo "<img class='profile-img' src='".$post -> picture."' width='300' height='300'>";
+            echo "<p>".$post -> content."</p></div>";
         }
 
 
