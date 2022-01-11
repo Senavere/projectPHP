@@ -4,6 +4,7 @@ require_once 'php/data_connection.php';
 session_start();
     $username = $_SESSION['username'];
     $userid = $_SESSION['user_id'];
+    $profileId = $_GET['id']  ?? '';
 ?>
 <!DOCTYPE html>
 <html lang="en">

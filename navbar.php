@@ -1,3 +1,4 @@
+
 <head>
     <link href="css/navbar.css" rel="stylesheet">
 
@@ -11,7 +12,7 @@
             <li><a href=".html">➡️</a></li>
             <li><a href=".html">🧭</a></li>
             <li><a href=".html">💗</a></li>
-            <li><a href=".html"></a></a></li>
+            <li><a href="profile.php?id=<?php echo $userid; ?>"></a></li>
 
         </ul>
     </nav>
