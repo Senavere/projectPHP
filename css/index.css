@@ -112,8 +112,15 @@ img {
     font-size: 3.2rem;
     font-weight: 300;
 }
-
-.profile-edit-btn {
+.profile-btn a{
+    text-decoration: none;
+    color: #262626;
+}
+.profile-btn a:hover{
+    text-decoration: none;
+    color: #0a83ec;
+}
+.profile-btn {
     font-size: 1.4rem;
     line-height: 1.8;
     border: 0.1rem solid #dbdbdb;
@@ -152,7 +159,7 @@ img {
 
 .profile-real-name,
 .profile-stat-count,
-.profile-edit-btn {
+.profile-btn {
     font-weight: 600;
 }
 
@@ -254,14 +261,14 @@ img {
         font-size: 2.2rem;
     }
 
-    .profile-edit-btn {
+    .profile-btn {
         order: 1;
         padding: 0;
         text-align: center;
         margin-top: 1rem;
     }
 
-    .profile-edit-btn {
+    .profile-btn {
         margin-left: 0;
     }
 
@@ -270,7 +277,7 @@ img {
         margin-top: 1.5rem;
     }
 
-    .profile-edit-btn,
+    .profile-btn,
     .profile-bio,
     .profile-stats {
         flex-basis: 100%;
@@ -352,14 +359,14 @@ Remove or comment-out the code block below to see how the browser will fall-back
             grid-gap: 1rem;
         }
 
-        .profile-edit-btn,
+        .profile-btn,
         .profile-stats,
         .profile-bio {
             grid-column: 1 / -1;
         }
 
         .profile-user-settings,
-        .profile-edit-btn,
+        .profile-btn,
         .profile-settings-btn,
         .profile-bio,
         .profile-stats {
