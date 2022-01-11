@@ -35,7 +35,7 @@ session_start();
 
       <h1 class="profile-user-name"><?php echo $username; ?></h1>
 
-      <button class="btn profile-btn">Edit Profile</button>
+      <button class="btn profile-btn"><a href="upload.php">Skapa Inlägg</a></button>
       <button class="btn profile-btn"><a href="login.php">Login</a></button>
       <button class="btn profile-btn"><a href="logout.php">Logout</a></button>
 
