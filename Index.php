@@ -1,3 +1,11 @@
+<?php
+
+include 'navbar.php';
+
+$profileId = $_GET['id']  ?? '';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +14,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
 
-    <link href="css/login-register.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
 
 </head>
 <body>
 
-    <?php include 'navbar.php'; ?>
+    <div class="gallery-pic">
+        <?php include 'php/php_showgallery.php'; ?>
+    </div>
 
 </body>
 </html>

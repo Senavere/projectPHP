@@ -11,7 +11,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
     $pdo = connectToDB();
-    $sql = $pdo->prepare('SELECT * FROM posts WHERE user_id = :userid');
+    $sql = $pdo->prepare('SELECT * FROM posts WHERE user_id != :userid'); /* Hämtar alla posts som inte är ens egna*/
         $sql -> bindValue(':userid', $_SESSION['user_id']); /* Vi använder $_SESSION för att kalla på aktuella användaren */
         $sql -> execute();
         $posts = $sql -> fetchAll(PDO::FETCH_CLASS);
