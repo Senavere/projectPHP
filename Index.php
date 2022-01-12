@@ -1,10 +1,9 @@
 <?php
-require_once 'php/data_connection.php';
-/* Error uppstår om du inte är inloggad mjaow*/
-session_start();
-    $username = $_SESSION['username'];
-    $userid = $_SESSION['user_id'];
-    $profileId = $_GET['id']  ?? '';
+require_once 'php/php_init.php';
+
+if (handle_user_not_logged_in()) {
+  return;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

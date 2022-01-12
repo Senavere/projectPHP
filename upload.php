@@ -1,5 +1,6 @@
 <?php
 
+require_once 'php/php_init.php';
 include 'navbar.php';
 
 require_once 'php/php_upload.php';

@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 function connectToDB(){
 
@@ -14,4 +14,4 @@ function connectToDB(){
     }
     return $pdo;
 }
-?>
+?> -->

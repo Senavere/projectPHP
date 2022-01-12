@@ -1,6 +1,8 @@
 <?php
-    require_once 'php/php_register.php';
+require_once 'php/php_init.php';
+require_once 'php/php_register.php';
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

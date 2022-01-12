@@ -1,22 +1,4 @@
 <?php
-/* Kollar efter errors*/
-ini_set('display-errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-require_once 'data_connection.php';
-
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-/* Kalla på denna funktion efter att SUBMIT med Method POST blivit klickad på */
-function is_post_request(){
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        return true;
-    } else {
-        return false;
-    }
-}
 
 if (is_post_request()) {
 
