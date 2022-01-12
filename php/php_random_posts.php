@@ -1,5 +1,4 @@
 <?php
-include 'php_follow.php';
 $sql = $pdo->prepare('SELECT * FROM posts WHERE user_id != :userid'); /* Hämtar alla posts som inte är ens egna*/
 $sql->bindValue(':userid', $_SESSION['user_id']); /* Vi använder $_SESSION för att kalla på aktuella användaren */
 $sql->execute();
@@ -18,12 +17,21 @@ if (is_post_request()) {
     }
 }
 
-foreach ($posts as $post) { ?>
+foreach ($posts as $post) {
+    // $posts innehåller endast 1 post.
+    // $post har i detta fall post_id = 2
+    // Varje kommentar har en kolumn för vilket post den tillhör.
+    // Vi vill hämta alla kommentarer för detta inlägg ($post) (post_id = 2).
+    $sql_select_posts = "SELECT * FROM comments WHERE post_id = $post->post_id";
+    $comments = $pdo->query($sql_select_posts)->fetchAll(PDO::FETCH_CLASS);
+?>
     <div class='gallery-item'>
-		<h2> <?php echo $post->user_id ?> </h2><br>
         <h2> <?php echo $post->title ?> </h2><br>
         <img class='profile-img' src='<?php echo $post->picture ?>' width='300' height='300'>
         <p> <?php echo $post->content ?></p>
+        <?php foreach ($comments as $comment) { ?>
+            <div class="comment"><?php echo $comment->content ?></div>
+        <?php } ?>
         <form method="post">
             <input type="hidden" name="post_id" value="<?php echo $post->post_id ?>" />
             Comment: <input type="text" name="comment"></input>
