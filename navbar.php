@@ -12,7 +12,6 @@
             <li><a href=".html">➡️</a></li>
             <li><a href="random_users_posts.php">🧭</a></li>
             <li><a href=".html">💗</a></li>
-            <li><a href="profile.php?id=<?php echo $userid; ?>"></a></li>
-
+            <li><a href="profile.php?id=<?php echo $userid; ?>">🙋</a></li>
         </ul>
     </nav>

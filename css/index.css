@@ -21,6 +21,11 @@ body {
     background-color: #fafafa;
     color: #262626;
     padding-bottom: 3rem;
+    margin:0;
+}
+
+a {
+    text-decoration: none;
 }
 
 img {
@@ -28,7 +33,7 @@ img {
 }
 
 .container {
-    max-width: 93.5rem;
+    max-width: 93.5em;
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -43,22 +48,23 @@ img {
     cursor: pointer;
 }
 
-.btn:focus {
-    outline: 0.5rem auto #4d90fe;
+.blue-btn a {
+    color: white;
+
 }
 
-.follow-btn {
-	background-color: #4d90fe;
+.blue-btn {
+	background-color: #0095f6;
+    border: 0.1rem solid #0488e0;
 	color: #fff;
     font-size: 1.4rem;
     line-height: 1.8;
-    border: 0.1rem solid #4d90fe;
     border-radius: 0.3rem;
     padding: 0 2.4rem;
     margin-left: 2rem;
 }
-.follow-btn:hover{
-	background-color: #153b78;
+.blue-btn:hover{
+    border: 0.1rem solid #096fb3;
 }
 
 

@@ -35,7 +35,7 @@ if (handle_user_not_logged_in()) {
       <h1 class="profile-user-name"><?php echo $username; ?></h1>
 
       <button class="btn profile-btn"><a href="upload.php">Skapa Inlägg</a></button>
-      <button class="btn profile-btn"><a href="login.php">Login</a></button>
+      <button class="btn blue-btn"><a href="login.php">Login</a></button>
       <button class="btn profile-btn"><a href="logout.php">Logout</a></button>
 
       <button class="btn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog" aria-hidden="true"></i></button>

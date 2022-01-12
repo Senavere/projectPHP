@@ -6,9 +6,11 @@ nav {
     display:flex;
     flex-direction: row;
     list-style-type: none;
+    padding: 0.5em 0;
+    border-bottom: 0.1em solid #dbdbdb;
 }
 .nav-img{
-    padding: 0 500px;
+    padding: 0 300px;
 }
 nav img {
     width: 150px;
@@ -19,7 +21,7 @@ ul{
     flex-direction: row;
     list-style-type: none;
     position: absolute;
-    right: 500px;
+    right: 300px;
 }
 ul li{
     padding: 0 10px;
