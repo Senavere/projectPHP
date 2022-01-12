@@ -9,11 +9,6 @@ Flexbox and floats are used as a fallback so that browsers which don't support g
 */
 
 /* Base Styles */
-
-:root {
-    font-size: 12px;
-}
-
 *,
 *::before,
 *::after {
@@ -100,15 +95,10 @@ img {
     border-radius: 50%;
 }
 
-.profile-user-settings,
 .profile-stats,
 .profile-bio {
     float: left;
     width: calc(66.666% - 2rem);
-}
-
-.profile-user-settings {
-    margin-top: 1.1rem;
 }
 
 .profile-user-name {
@@ -132,12 +122,6 @@ img {
     padding: 0 2.4rem;
     margin-left: 2rem;
 }
-
-.profile-settings-btn {
-    font-size: 2rem;
-    margin-left: 1rem;
-}
-
 .profile-stats {
     margin-top: 2.3rem;
 }
@@ -184,11 +168,6 @@ img {
     cursor: pointer;
 }
 
-.fa-clone,
-.fa-comment {
-    transform: rotateY(180deg);
-}
-
 .gallery-image {
     width: 100%;
     height: 100%;
@@ -209,7 +188,6 @@ img {
     }
 
     .profile-image,
-    .profile-user-settings,
     .profile-bio,
     .profile-stats {
         float: none;
@@ -218,13 +196,6 @@ img {
 
     .profile-image img {
         width: 7.7rem;
-    }
-
-    .profile-user-settings {
-        flex-basis: calc(100% - 10.7rem);
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 1rem;
     }
 
     .profile-user-name {
@@ -306,7 +277,6 @@ Remove or comment-out the code block below to see how the browser will fall-back
     }
 
     .profile-image,
-    .profile-user-settings,
     .profile-stats,
     .profile-bio,
     .gallery-item,
@@ -324,21 +294,13 @@ Remove or comment-out the code block below to see how the browser will fall-back
             grid-row: 1 / 2;
         }
 
-        .profile-user-settings {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            grid-gap: 1rem;
-        }
-
         .profile-btn,
         .profile-stats,
         .profile-bio {
             grid-column: 1 / -1;
         }
 
-        .profile-user-settings,
         .profile-btn,
-        .profile-settings-btn,
         .profile-bio,
         .profile-stats {
             margin: 0;
