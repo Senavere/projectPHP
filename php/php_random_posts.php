@@ -1,4 +1,5 @@
 <?php
+include 'php_follow.php';
 $sql = $pdo->prepare('SELECT * FROM posts WHERE user_id != :userid'); /* Hämtar alla posts som inte är ens egna*/
 $sql->bindValue(':userid', $_SESSION['user_id']); /* Vi använder $_SESSION för att kalla på aktuella användaren */
 $sql->execute();
@@ -19,6 +20,7 @@ if (is_post_request()) {
 
 foreach ($posts as $post) { ?>
     <div class='gallery-item'>
+		<h2> <?php echo $post->user_id ?> </h2><br>
         <h2> <?php echo $post->title ?> </h2><br>
         <img class='profile-img' src='<?php echo $post->picture ?>' width='300' height='300'>
         <p> <?php echo $post->content ?></p>

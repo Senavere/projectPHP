@@ -62,6 +62,10 @@ img {
     padding: 0 2.4rem;
     margin-left: 2rem;
 }
+.follow-btn:hover{
+	background-color: #153b78;
+}
+
 
 .visually-hidden {
     position: absolute !important;
@@ -272,6 +276,7 @@ img {
         display: block;
     }
 }
+
 
 /*
 
