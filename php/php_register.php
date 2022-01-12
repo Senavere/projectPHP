@@ -15,6 +15,8 @@ if(isset($_POST['submit'])){
         $regPassword = $_POST['password'];
         $regConfPassword = $_POST['confpassword'];
 
+    /* Felmeddelanden om man inte skriver in rätt i fälten*/
+
         if(empty($regEmail) || empty($regUsername) || empty($regPassword) || empty($regConfPassword)){
             $error = 'You have to fill all spaces';
         }
@@ -34,6 +36,8 @@ if(isset($_POST['submit'])){
         if($regPassword != $regConfPassword){
             $error = 'Passwords doesnt match';
         }
+
+    /* Här kollar vi i databasen om användaren redan finns eller inte, om inte läggs man till i databasen och kan sen logga in*/
 
         if(empty($error)){
             $pdo = connectToDB();

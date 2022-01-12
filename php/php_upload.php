@@ -29,6 +29,8 @@ $title = $_POST['title'];
 
 $postFile = $picFolder . $picFileName;
 
+/* bilden läggs till i posts-mappen och bildlänken läggs i databasen, uppladdningen kopplas till ett user_id */
+
 if(isset($_POST ['submit'])) {
     if(move_uploaded_file($tmpFile, $postFile)) {
         $pdo = connectToDB();

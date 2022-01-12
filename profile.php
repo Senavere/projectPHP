@@ -73,7 +73,7 @@ session_start();
 
   <div class="gallery">
 
-    <?php include 'php/php_showgallery.php'; ?>
+    <?php include 'php/php_showgallery.php'; ?> <!-- Här läggs posts upp synligt på sidan -->
 
 
     </div>

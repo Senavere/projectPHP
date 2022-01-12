@@ -9,6 +9,7 @@ require_once 'data_connection.php';
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+    /* Vi hämtar posts från databasen och printar ut på vald sida */
 
     $pdo = connectToDB();
     $sql = $pdo->prepare('SELECT * FROM posts WHERE user_id = :userid');

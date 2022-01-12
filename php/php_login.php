@@ -12,6 +12,8 @@ if(isset($_POST['submit'])){
         $loginUsername = $_POST['username'];
         $loginPassword = $_POST['password'];
 
+     /* Felmeddelanden som kommer upp om man skrivit fel eller om något saknas*/
+
         if(empty($loginUsername) || empty($loginPassword)){
             $error = 'You have to fill all spaces';
         }
@@ -20,6 +22,7 @@ if(isset($_POST['submit'])){
             $error = 'You can only use letters in username';
         }
 
+    /* Här kollar vi i databasen om användaren finns eller inte, finns den så loggas man in*/
 
     if(empty($error)){
         $pdo = connectToDB();
