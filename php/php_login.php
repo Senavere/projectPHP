@@ -2,10 +2,6 @@
 
 require_once 'data_connection.php';
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 $error = '';
 
 if(isset($_POST['submit'])){
@@ -39,7 +35,7 @@ if(isset($_POST['submit'])){
             session_start();
             $_SESSION['username'] = $user['username'];
             $_SESSION['user_id'] = $user['user_id'];
-            header("location:index.php");
+            header("location:random_users_posts.php");
         }else {
             $error = 'password doesnt match';
         }

@@ -1,7 +1,7 @@
 <?php
 
 include 'navbar.php';
-
+require_once 'php/data_connection.php';
 require_once 'php/php_upload.php';
 
 ?>
@@ -12,6 +12,7 @@ require_once 'php/php_upload.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload</title>
+
 </head>
 <body>
 
