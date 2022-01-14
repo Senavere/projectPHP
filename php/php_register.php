@@ -46,6 +46,7 @@ if(isset($_POST['submit'])){
                 $newPassword = password_hash($regPassword, PASSWORD_DEFAULT);
                 $sql_insert = "INSERT INTO users(username, email, password) VALUES ('$regUsername', '$regEmail', '$newPassword')";
                 $pdo -> query($sql_insert);
+                header("location:login.php");
                 $success ='user has been added';
             }
         }

@@ -37,7 +37,7 @@ require_once 'php/php_login.php';
 
             <div class="login-btns">
                 <button type="submit" name="submit" class="login-btn">Continue</button>
-                <a href="register.php"><button type="confirm" class="login-btn">Register</button></a>
+                <a href="register.php"><button type="submit" class="login-btn">Register</button></a>
             </div>
 
             <?= "<h3>$error</h3>" ?>
